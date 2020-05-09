@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> JavaScript Snake game </title>    
-    <style>
-        canvas {background: black}
-    </style>
+    <title> JavaScript Snake game </title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/css/rhgame.1a562476.css">
     <link rel="stylesheet" href="/static/css/index.css">
 
     <script src="/static/js/index.js"></script>
@@ -13,15 +13,26 @@
       
   <body>
 
-      <div class="w3-bar">
-        <h2 class="w3-bar-item" class="w3-opacity" id="header">Snake Xenzia</h2>
-        <button class="w3-bar-item w3-button w3-border" type="button" id="start_button" onclick="init()">Click To Start</button>
+      <h2 id="header"> <b> Snake Xenzia</b></h2>
+
+      <div class="icon-bar">
+        <button type="button" id="start_button" onclick="init()">
+          <b> Click To Start </b>
+        </button>
       </div>
 
       <div class="w3-container">
         <canvas id="myCanvas" width="1000" height="800">
         </canvas>
       </div>
+
+      <footer class="footer">
+        <ul>
+          <li><a href="https://www.github.com/Deepank308/" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/agrawal-deepank/" target="_blank">About Us</a></li>
+          <li><a href="" target="_blank">Privacy &amp; Terms</a></li>
+        </ul>
+      </footer>
       
   </body>
 </html>

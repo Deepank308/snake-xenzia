@@ -21,6 +21,10 @@ const move = {
     DOWN : 40
 }
 
+const END = 0;
+const PLAY = 1;
+const PAUSE = 2;
+
 var game_state = {
 
     'snake_x' : [],
@@ -29,11 +33,11 @@ var game_state = {
     'food_x': 0,
     'food_y': 0,
     'dir': move.RIGHT,
-    'in_game': false,
+    'in_game': END,
     'growth' : false,
 
     start : function() {
-        game_state.in_game = true;
+        game_state.in_game = PLAY;
         
         this.snake_x = [];
         this.snake_y = [];
@@ -53,6 +57,15 @@ var game_state = {
                     game_state.dir = e.keyCode;
                 }
             }
+            // else if(e.keyCode == 32){
+            //     if(game_state.in_game == PLAY){
+            //         game_state.in_game = PAUSE;
+            //     }
+            //     else if(game_state.in_game == PAUSE){
+            //         game_state.in_game = PLAY;
+            //     }
+            //     // game_state.in_game = game_state.in_game%2 + 1;
+            // }
         })
         window.addEventListener('keyup', function(e) {
             ;
@@ -61,13 +74,14 @@ var game_state = {
 
     stop : function() {
         clearInterval(this.interval);
-        init();
+        // init();
     }
 }
 
 function init() {
 
-    if( game_state.in_game == true) return;
+    if(game_state.in_game == PLAY) return;
+
     canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext('2d');
 
@@ -84,7 +98,7 @@ function init() {
 function load_images(){
 
     head = new Image();
-    head.src = '/static/img/head_new.png';
+    head.src = '/static/img/head.png';
 
     tail = new Image();
     tail.src = '/static/img/tail.png';
@@ -95,11 +109,11 @@ function load_images(){
 
 function game_loop() {
 
-    if(game_state.in_game){
+    if(game_state.in_game == PLAY){
         logic_handler();
         draw_canvas();
     }
-    else{
+    else if(game_state.in_game == END){
         game_state.stop();
     }
 }
@@ -147,16 +161,16 @@ function detect_collision() {
     // snake bites itself
     for(var i = 1; i < game_state['snake_x'].length; i++){
         if (game_state.snake_x[i] == game_state.snake_x[0] && game_state.snake_y[i] == game_state.snake_y[0]){
-            game_state.in_game = false;
+            game_state.in_game = END;
         }  
     }
     
     // wall collision
     if(game_state.snake_x[0] < 0 || game_state.snake_x[0] >= WIDTH){
-        game_state.in_game = false;
+        game_state.in_game = END;
     }
     else if(game_state.snake_y[0] < 0 || game_state.snake_y[0] >= HEIGHT){
-        game_state.in_game = false;
+        game_state.in_game = END;
     }
 }
 
