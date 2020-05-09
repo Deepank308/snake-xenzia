@@ -67,13 +67,14 @@ var game_state = {
 
 function init() {
 
+    if( game_state.in_game == true) return;
     canvas = document.getElementById('myCanvas');
     ctx = canvas.getContext('2d');
 
     C_WIDTH = canvas.width;
     C_HEIGHT = canvas.height;
-    HEIGHT = C_HEIGHT / SCALE ;
-    WIDTH = C_WIDTH / SCALE ;
+    HEIGHT = C_HEIGHT / SCALE;
+    WIDTH = C_WIDTH / SCALE;
 
     load_images();
 
@@ -83,7 +84,7 @@ function init() {
 function load_images(){
 
     head = new Image();
-    head.src = '/static/img/head.png';
+    head.src = '/static/img/head_new.png';
 
     tail = new Image();
     tail.src = '/static/img/tail.png';

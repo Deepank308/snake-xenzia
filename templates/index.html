@@ -5,13 +5,23 @@
     <style>
         canvas {background: black}
     </style>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/static/css/index.css">
 
     <script src="/static/js/index.js"></script>
   </head>
       
-  <body onload="init();">
-      <canvas id="myCanvas" width="500" height="500">
-      </canvas>
+  <body>
+
+      <div class="w3-bar">
+        <h2 class="w3-bar-item" class="w3-opacity" id="header">Snake Xenzia</h2>
+        <button class="w3-bar-item w3-button w3-border" type="button" id="start_button" onclick="init()">Click To Start</button>
+      </div>
+
+      <div class="w3-container">
+        <canvas id="myCanvas" width="1000" height="800">
+        </canvas>
+      </div>
+      
   </body>
 </html>

@@ -1,4 +1,42 @@
-/* body {
-    margin: 0px;
+body {
+    margin: 2px;
     height: 100%;
-  } */
+  }
+
+h2 {
+  font-family: Verdana;
+}
+
+.w3-bar {
+  background-color: rgb(119, 180, 111);
+}
+
+#start_button {
+  justify-self: 
+}
+
+.w3-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+}
+
+.w3-button {
+  position: relative;
+  top: 30 px;
+  left: 27%;
+  font: Verdana;
+  color: white;
+  border-radius: 12px;
+  border: 2px black;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.w3-button:hover {
+  background-color: #4CAF50; /* Green */
+  color: rgba(255, 250, 250, 0.938);
+}
+
+.center {
+  width: 800px;
+}
