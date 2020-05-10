@@ -31,3 +31,5 @@ To start the server: `flask run`
 Here's a demo of Snake in Action:
 
 ![Snake Xenzia](/static/img/demo.gif)
+
+Theme inspired from `Google Foo-bar challenge` window!
