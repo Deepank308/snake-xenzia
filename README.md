@@ -28,6 +28,6 @@ $env:FLASK_DEBUG=1
 
 To start the server: `flask run`
 
-Here's an image of Snake in Action:
+Here's a demo of Snake in Action:
 
-![Snake Xenzia](/static/img/sample.png)
+![Snake Xenzia](/static/img/demo.gif)
