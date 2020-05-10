@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title> JavaScript Snake game </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
-    <link rel="stylesheet" href="/static/css/rhgame.1a562476.css">
     <link rel="stylesheet" href="/static/css/index.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://unpkg.com/vuex"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/static/js/index.js"></script>
+
   </head>
       
   <body>
@@ -19,11 +26,56 @@
         <button type="button" id="start_button" onclick="init()">
           <b> Click To Start </b>
         </button>
+
+        <b>
+          <div id="score" > 
+           Score: 0
+          </div>
+        </b>
       </div>
 
       <div class="w3-container">
-        <canvas id="myCanvas" width="1000" height="800">
-        </canvas>
+        <ul>
+          <li> 
+            <div class="card">
+              <h1>Keyboard Controls</h1>
+              <h3>Move the Snake!</h3>
+              <ul>
+                <li> Left: &larr;</li>
+                <li> Right &rarr;</li>
+                <li> Up: &uarr;</li>
+                <li> Down: &darr;</li>
+              </ul>
+              <h3>Play/Pause</h3>
+              <ul><li>Use Space bar</li></ul>
+              <h3>Special abilities, woah!!</h3>
+              <ul><li>Immunity: Press <b>I</b> </li></ul>
+            </div>
+          </li>
+          
+        </ul>
+        <canvas id="myCanvas" width="1000" height="800"></canvas>
+
+        <ul>
+          <li>
+            <div class="card" id="notifications">
+              <h1>Active commands</h1>
+              <ul>
+                <li>
+                  <h3>
+                    <div id="pause" > Paused </div>
+                  </h3>
+                </li>
+                <li>
+                  <h3>
+                    <div id="immune" > Immune </div>
+                  </h3>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        
       </div>
 
       <footer class="footer">
@@ -33,6 +85,6 @@
           <li><a href="" target="_blank">Privacy &amp; Terms</a></li>
         </ul>
       </footer>
-      
+    
   </body>
 </html>

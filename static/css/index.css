@@ -33,6 +33,17 @@ h2 {
   font-size: 20px; /* Increased font size */
 }
 
+.icon-bar #score {
+  float: right; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 20%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  background-color: #ef67a5; /* White text color */
+  font-size: 20px; /* Increased font size */
+  color: white;
+}
+
 .icon-bar button:hover {
   background-color: rgb(221, 172, 81); /* Add a hover color */
 }
@@ -43,7 +54,7 @@ h2 {
 
 .w3-container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   padding-top: 3%;
 }
 
@@ -51,13 +62,32 @@ h2 {
   width: 800px;
 }
 
+.card {
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  background-color: #3d3d3d;
+  text-indent: 10%;
+  padding-top: 1%;
+  color: #d7d7d7;
+}
+
+#notifications {
+  width: 400px;
+  height: 200px;
+}
+
 #myCanvas {
-  /* background-color: #666; */
+  position: relative;
   background-color: rgb(212, 212, 212);
+  border: #35bdb8;
+  margin-left: 8%;
 }
 
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   color: #999;
   left: 0;
@@ -70,7 +100,6 @@ h2 {
   display: block;
   padding: 0;
   border: 0;
-  /* font: inherit; */
 }
 
 .footer ul {
@@ -110,4 +139,7 @@ h2 {
 
 .footer a:hover {
   color: #35bdb8;
+}
+.w3-container ul li {
+  margin-left: 10%;
 }
